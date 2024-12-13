@@ -1,0 +1,48 @@
+spring:
+  application:
+    name: cloud-storage
+  datasource:
+    url: jdbc:postgresql://localhost:5432/storage
+    username: postgres
+    password: 10172003
+  jpa:
+    generate-ddl: false
+    hibernate:
+      ddl-auto: update
+  liquibase:
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
+    enabled: true
+    url: ${spring.datasource.url}
+    change-log: liquibase/changelog-master.xml
+springdoc:
+  api-docs:
+    path: "/openapi/api-docs"
+  swagger-ui:
+    path: "/openapi/swagger-ui"
+
+token:
+  signing:
+    key: 53A73E5F1C4E0A2D3B5F2D784E6A1B423D6F247D1F6E5C3A596D635A75327855
+
+minio:
+  client:
+    endpoint: http://localhost:9000
+    access-key: TIpSMRtoN0MqGE6Axh1S
+    secret-key: TF5HoarTIUMwNjeiKBl74bIJWf8iHlkEj1tRy2oT
+  bucket:
+    name: cloud
+
+app:
+  database:
+    name: storage
+    user: postgres
+    password: 10172003
+    backup:
+      # todo
+      path: C:\Users\Gersay\Desktop\cloud-storage\src\main\resources\backup\backup.sql
+  yandex:
+    oauth:
+      token: y0_AgAAAAARk-s3AAzs8wAAAAEbruOTAABsyA2syM5ITL74pLy_B3cqcD8IJg
+    backup:
+      path: /backup/dump.sql
