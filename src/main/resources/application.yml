@@ -40,7 +40,7 @@ app:
     password: 10172003
     backup:
       # todo
-      path: C:\Users\Gersay\Desktop\cloud-storage\src\main\resources\backup\backup.sql
+      path: C:\Users\Kseny\Desktop\cloud-storage\src\main\resources\backup\backup.sql
   yandex:
     oauth:
       token: y0_AgAAAAARk-s3AAzs8wAAAAEbruOTAABsyA2syM5ITL74pLy_B3cqcD8IJg
